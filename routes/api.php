@@ -19,6 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['middleware' => ['cors']], function () {
-    //Rutas a las que se permitirá acceso
     
+    
+
 });
