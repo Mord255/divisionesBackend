@@ -26,7 +26,7 @@ class divisionesModel extends Model{
     }
 
     public static function eliminarDivision($id){
-        $sql = "DELETE * FROM divisiones WHERE divisiones_id = ?;";
+        $sql = "DELETE FROM divisiones WHERE divisiones_id = ?;";
         $result= DB::select($sql,[$id]);
         return $result;
     }

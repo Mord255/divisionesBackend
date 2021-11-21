@@ -25,7 +25,7 @@ Route::group(['middleware' => ['cors']], function () {
     Route::post('/crearDivision', 'divisionesController@crearDivision')->name('crearDivision');
     Route::get('/mostrarDivision/{id}', 'divisionesController@mostrarDivision')->name('mostrarDivision');
     Route::post('/editarDivision/{id}', 'divisionesController@editarDivision')->name('editarDivision');
-    Route::get('/eliminarDivision/{id}', 'divisionesController@eliminarDivision')->name('eliminarDivision');
+    Route::post('/eliminarDivision/{id}', 'divisionesController@eliminarDivision')->name('eliminarDivision');
 
 
 
