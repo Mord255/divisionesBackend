@@ -20,6 +20,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['middleware' => ['cors']], function () {
     
-    
+    Route::get('/listarDivisiones', 'divisionesController@listarDivisiones')->name('listarDivisiones');
+    Route::get('/listarSubDivisiones/{idDivision}', 'divisionesController@listarSubDivisiones')->name('listarSubDivisiones');
+    Route::post('/crearDivision', 'divisionesController@crearDivision')->name('crearDivision');
+    Route::get('/mostrarDivision/{id}', 'divisionesController@mostrarDivision')->name('mostrarDivision');
+    Route::post('/editarDivision/{id}', 'divisionesController@editarDivision')->name('editarDivision');
+    Route::get('/eliminarDivision/{id}', 'divisionesController@eliminarDivision')->name('eliminarDivision');
+
+
 
 });
